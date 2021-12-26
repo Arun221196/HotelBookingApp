@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "02e94e7a-3665-4632-be94-947075b47be3",
+		"name": "HotelBookingApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Kumar\",\n    \"password\": \"arun2211\"\n}       ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3400/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3400",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInJvbGVfaWQiOjEsInVzZXJfbmFtZSI6ImFydW5rdW1hcjIyMjk1MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6InF3ZXJ0eSJ9LCJpYXQiOjE2NDA1MDQ4MDgsImV4cCI6MTY0MDUwODQwOH0.q-8VAl9aUbyRuCqBXvgUvOh6g2Jx90eMuorlwou2JDo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"Kumar\",\n    \"password\": \"arun2211\",\n    \"roleId\":2 \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3400/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3400",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddHotel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInJvbGVfaWQiOjEsInVzZXJfbmFtZSI6ImFydW5rdW1hcjIyMjk1MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6InF3ZXJ0eSJ9LCJpYXQiOjE2NDA1MTY3NDIsImV4cCI6MTY0MDUyMDM0Mn0.mjQ4XyXyCCujJAKL0hV_p661W0BQmSbYnx8kxws8B3A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hotelName\": \"The Residency Towers Chennai\",\n    \"hotelDesc\": \"The Residency Towers Chennai\",\n    \"hotelLocation\":\"Chennnai\",\n    \"ownerId\":4 \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3400/addhotel",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3400",
+					"path": [
+						"addhotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateHotel",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInJvbGVfaWQiOjEsInVzZXJfbmFtZSI6ImFydW5rdW1hcjIyMjk1MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6InF3ZXJ0eSJ9LCJpYXQiOjE2NDA1MTY3NDIsImV4cCI6MTY0MDUyMDM0Mn0.mjQ4XyXyCCujJAKL0hV_p661W0BQmSbYnx8kxws8B3A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"hotelId\":2,\n    \"hotelName\": \"Holiday INN\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3400/updatehotel",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3400",
+					"path": [
+						"updatehotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetHotel",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInJvbGVfaWQiOjEsInVzZXJfbmFtZSI6ImFydW5rdW1hcjIyMjk1MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6InF3ZXJ0eSJ9LCJpYXQiOjE2NDA1MTMwMzgsImV4cCI6MTY0MDUxNjYzOH0.ycRm3_Zr4yvy85ZXWcGMz7_vBfGT33eo-7WE_mh-PAg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3400/gethotel",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3400",
+					"path": [
+						"gethotel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckAuth",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEsInJvbGVfaWQiOjEsInVzZXJfbmFtZSI6ImFydW5rdW1hcjIyMjk1MUBnbWFpbC5jb20iLCJwYXNzd29yZCI6InF3ZXJ0eSJ9LCJpYXQiOjE2NDA1MDQ4MDgsImV4cCI6MTY0MDUwODQwOH0.q-8VAl9aUbyRuCqBXvgUvOh6g2Jx90eMuorlwou2JDo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3400/checkAuth",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3400",
+					"path": [
+						"checkAuth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
